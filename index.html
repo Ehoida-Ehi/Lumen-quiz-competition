@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        jennifer: "#121c84",
+                        submitGreen: '#4CAF50'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+             @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+        .bounce {
+            animation: bounce 1s infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-blue-100 p-8">
+    <!-- Nav begins -->
+    <nav class="bg-gradient-to-r from-blue-400 via-orange-400 to-blue-500 w-full fixed top-0 left-0 z-50">
+        <div class="max-w-7xl mx-auto px-2">
+            <div class="flex justify-between items-center py-2">
+                <!-- Left Side: Links -->
+                <div class="flex space-x-4">
+                    <a href="#"
+                        class="relative text-gray-700 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-zinc-600 after:transition-all after:duration-300 hover:after:w-full font-semibold">
+                        Quiz
+                    </a>
+                    <a href="#"
+                        class="relative text-gray-700 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-zinc-600 after:transition-all after:duration-300 hover:after:w-full font-semibold">
+                        Students
+                    </a>
+                    <a href="#"
+                        class="relative text-gray-700 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-zinc-600 after:transition-all after:duration-300 hover:after:w-full font-semibold">
+                        About us
+                    </a>
+                    <a href="#"
+                        class="relative text-gray-700 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-zinc-600 after:transition-all after:duration-300 hover:after:w-full font-semibold">
+                        Contact us
+                    </a>
+                </div>
+
+                <!-- Center: Logo -->
+                <div class="flex-grow flex justify-center">
+                    <a href="#" class="text-2xl font-bold text-gray-800">
+                        <img style="width: 60px; height: 40px;" src="./images/quiz-5595288_1280.jpg">
+                    </a>
+                </div>
+
+                <!-- Right Side: Icons -->
+                <div class="flex space-x-4 items-center">
+                    <a href="#" class="text-gray-700 hover:text-gray-900">
+                        <!-- Search Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            class="w-8 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 21l-4.35-4.35M16 10a6 6 0 11-12 0 6 6 0 0112 0z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-700 hover:text-gray-900">
+                        <!-- Profile Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="24" fill="currentColor"
+                            class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                            <path fill-rule="evenodd"
+                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                        </svg>
+                    </a>
+
+                    <a href="quiz.html">
+                        <!-- Take Quiz button -->
+                        <button
+                            class="bg-blue-800 hover:bg-blue-600 text-white font-bold px-4 py-2 rounded-md hover:scale-110 transition-transform hover:text-black">
+                            Take Quiz
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- ends here -->
+
+    <!-- Hero section -->
+    <div class="w-full ">
+
+        <!-- Banner Image -->
+        <div class="relative bg-cover bg-center h-[550px] w-full"
+            style="background-image: url('./images/Cowbellpedia-Winners.jpg'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-black opacity-40"></div>
+
+            <!-- Text and Button -->
+            <div class="absolute inset-0 flex justify-center items-center">
+                <div class="text-center text-white">
+                    <p class="mb-4 font-bold text-4xl">Introducing</p>
+                    <h1 class="text-[70px] font-bold mb-4">
+                        Friendship Quiz Competition
+                    </h1>
+                    <a href="quiz.html"
+                        class="inline-block px-6 py-4 bg-gradient-to-r from-blue-400 via-orange-400 to-blue-500 mt-8 text-white font-semibold bounce border border-gray-300 rounded-md hover:scale-125 transition-transform">
+                        Take Quiz
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- heading -->
+    <div class="container mx-auto mt-10 px-4 flex gap-8">
+        <h1 class="text-5xl text-gray-700 font-bold  mb-10 mt-8">Instructions</h1>
+        <button class="h-[40px] mt-10 px-4  bg-gradient-to-r from-blue-400 via-orange-400 to-blue-500 mt-8 text-white font-semibold bounce border border-gray-300 rounded-md hover:scale-125 transition-transform">Please Read Me</button>
+    </div>
+
+    <!-- Instruction -->
+    <div class="container mx-auto  px-4 ">
+         <div class="flex flex-col">
+            <p class="mb-4 font-semibold text-[18px]">. Enter your school name and student name in the input provided</p>
+            <p class="mb-4 font-semibold text-[18px]">. A student has 2 minutes to answer 10 questions </p>
+            <P class="mb-4 font-semibold text-[18px]">. The next question appears immediately after you have submitted </P>
+            <P class="mb-4 font-semibold text-red-600 text-[18px]">. After 3 schools have participated in the quiz, the student with the higest overall score is the winner of the competition</P>
+         </div>
+    </div>
+
+
+    <!-- heading -->
+    <div class="container mx-auto mt-4 px-4">
+        <h1 class="text-5xl text-gray-700 font-bold  mb-10 mt-8">See our of past winners</h1>
+    </div>
+
+    <section>
+        <div class="container mx-auto px-4 ">
+            <div class="grid  grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-2 ">
+                <div class="flex flex-col">
+                    <div class="items-center justify-center mb-8 ml-8 hover:scale-125 transition-transform ">
+                        <img style="width: 70px;" src="./images/top1.jpg">
+                    </div>
+                    <h1 class="font-semibold mb-4">Imade Osare (2023) </h1>
+                    <p class="mb-4">Benin, Edo state</p>
+                    <p class="mb-6 italic">Since becoming the winner of this competition<br>my life has changed...</p>
+                    <a class="text-blue-600 font-bold">Read More </a>
+                </div>
+
+
+                <div class="flex flex-col">
+                    <div class="items-center justify-center mb-8 ml-8 hover:scale-125 transition-transform">
+                        <img style="width: 150px;" src="./images/top2.webp">
+                    </div>
+                    <h1 class="font-semibold mb-4">Onyeka Samuel (2022)</h1>
+                    <p class="mb-4">Downtown, Enugu state</p>
+                    <p class="mb-6 italic">i feel great winning this quiz competition <br>it is a great achievement...
+                    </p>
+                    <a class="text-blue-600 font-bold">Read More </a>
+                </div>
+
+
+                <div class="flex flex-col">
+                    <div class="items-center justify-center mb-8 ml-8 hover:scale-125 transition-transform">
+                        <img style="width: 160px;" src="./images/top3.jpg">
+                    </div>
+                    <h1 class="font-semibold mb-4">Toju Oris (2021)</h1>
+                    <p class="mb-4">Asaba, Delta state</p>
+                    <p class="mb-6 italic">i want to thank the sponsors for...</p>
+                    <a class="text-blue-600 font-bold">Read More </a>
+                </div>
+
+
+                <div class="flex flex-col">
+                    <div class="items-center justify-center mb-8 ml-8 hover:scale-125 transition-transform">
+                        <img style="width: 150px;" src="./images/Miss-Precious-Umeh-e1688837330861.webp">
+                        <h1 class="font-semibold mb-2">Bose Akin (2020)</h1>
+                        <p class="mb-4">Abeokuta, Ogun state</p>
+                        <p class="mb-6 italic">it a great oportinunty to show talents . <br>i highly recommend...</p>
+                        <a class="text-blue-700 font-bold">Read More </a>
+                    </div>
+
+                </div>
+
+
+            </div>
+    </section>
+
+
+
+    <!-- section slider -->
+    <section>
+        <div class="container mx-auto mt-24 px-4 ">
+            <h1 class="text-5xl text-gray-700 font-bold  mb-10 mt-8">See our slide gallery</h1>
+            <div class="relative">
+                <!-- Slider wrapper -->
+                <div id="slider-contentA" class="flex transition-transform ease-in-out duration-300">
+                    <!-- First slide with 4 images -->
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-2">
+                        <!-- Image 1 -->
+                        <div class="relative group hover:scale-125 transition-transform">
+                            <img src="./images/Cowbellpedia-Winners.jpg" alt="Image 1" class="w-full h-auto ">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="white"
+                                    class="bi bi-plus-circle mb-2" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 1a7 7 0 1 1 0 14A7 7 0 0 1 8 1zm0 1a6 6 0 1 0 0 12A6 6 0 0 0 8 2zm3 5a.5.5 0 0 1 .5.5V8H8v3a.5.5 0 0 1-1 0V8H4a.5.5 0 0 1 0-1h3V4a.5.5 0 0 1 1 0v3h3a.5.5 0 0 1 .5.5z" />
+                                </svg>
+                                <p class="text-white text-lg mt-2">@juliaricketti</p>
+                                <div class="flex items-center text-white mt-2 gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-suit-heart" viewBox="0 0 16 16">
+                                        <path
+                                            d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.6 7.6 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
+                                    </svg>
+                                    <span>962 likes</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2 images -->
+
+                        <div class="relative group">
+                            <img src="./images/Cowbellpedia.jpg" alt="Image 1" class="w-full h-auto">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="white"
+                                    class="bi bi-plus-circle mb-2" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 1a7 7 0 1 1 0 14A7 7 0 0 1 8 1zm0 1a6 6 0 1 0 0 12A6 6 0 0 0 8 2zm3 5a.5.5 0 0 1 .5.5V8H8v3a.5.5 0 0 1-1 0V8H4a.5.5 0 0 1 0-1h3V4a.5.5 0 0 1 1 0v3h3a.5.5 0 0 1 .5.5z" />
+                                </svg>
+                                <p class="text-white text-lg mt-2">@allnetteorg</p>
+                                <div class="flex items-center justify-center text-white mt-2 gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-suit-heart" viewBox="0 0 16 16">
+                                        <path
+                                            d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.6 7.6 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
+                                    </svg>
+                                    <span>6 Likes</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- image 3 -->
+
+                        <div class="relative group">
+                            <img style="width: 320px; height: 100px;" src="./images/school1.jpg" alt="Image 3"
+                                class="w-full h-auto">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="white"
+                                    class="bi bi-plus-circle mb-2" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 1a7 7 0 1 1 0 14A7 7 0 0 1 8 1zm0 1a6 6 0 1 0 0 12A6 6 0 0 0 8 2zm3 5a.5.5 0 0 1 .5.5V8H8v3a.5.5 0 0 1-1 0V8H4a.5.5 0 0 1 0-1h3V4a.5.5 0 0 1 1 0v3h3a.5.5 0 0 1 .5.5z" />
+                                </svg>
+                                <p class="text-white text-lg mt-2">@bose</p>
+                                <div class="flex items-center text-white mt-2 gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-suit-heart" viewBox="0 0 16 16">
+                                        <path
+                                            d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.6 7.6 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
+                                    </svg>
+                                    <span>1207 likes</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- image 4 -->
+                        <div class="relative group">
+                            <img style="height: 100px;" src="./images/school2.jpg" alt="Image 1" class="w-full h-auto">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="white"
+                                    class="bi bi-plus-circle mb-2" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 1a7 7 0 1 1 0 14A7 7 0 0 1 8 1zm0 1a6 6 0 1 0 0 12A6 6 0 0 0 8 2zm3 5a.5.5 0 0 1 .5.5V8H8v3a.5.5 0 0 1-1 0V8H4a.5.5 0 0 1 0-1h3V4a.5.5 0 0 1 1 0v3h3a.5.5 0 0 1 .5.5z" />
+                                </svg>
+                                <p class="text-white text-lg">@donovanclingan</p>
+                                <div class="flex items-center text-white mt-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-suit-heart" viewBox="0 0 16 16">
+                                        <path
+                                            d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.6 7.6 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
+                                    </svg>
+                                    <span>1990 likes</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Repeat the grid structure for the second slide -->
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-2">
+                        <!-- Image 5 -->
+                        <div class="relative group">
+                            <img style="width: 320px;" src="./images/school3.jpg" alt="Image 1" class="w-full h-auto">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="white"
+                                    class="bi bi-plus-circle mb-2" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 1a7 7 0 1 1 0 14A7 7 0 0 1 8 1zm0 1a6 6 0 1 0 0 12A6 6 0 0 0 8 2zm3 5a.5.5 0 0 1 .5.5V8H8v3a.5.5 0 0 1-1 0V8H4a.5.5 0 0 1 0-1h3V4a.5.5 0 0 1 1 0v3h3a.5.5 0 0 1 .5.5z" />
+                                </svg>
+                                <p class="text-white text-lg mt-2">@donovanclingan</p>
+                                <div class="flex items-center text-white mt-2 gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-suit-heart" viewBox="0 0 16 16">
+                                        <path
+                                            d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.6 7.6 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
+                                    </svg>
+                                    <span>2296 likes</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 6 images -->
+
+                        <div class="relative group">
+                            <img style="width: 320px;" src="./images/Cowbellpedia.jpg" alt="Image 1"
+                                class="w-full h-auto">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="white"
+                                    class="bi bi-plus-circle mb-2" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 1a7 7 0 1 1 0 14A7 7 0 0 1 8 1zm0 1a6 6 0 1 0 0 12A6 6 0 0 0 8 2zm3 5a.5.5 0 0 1 .5.5V8H8v3a.5.5 0 0 1-1 0V8H4a.5.5 0 0 1 0-1h3V4a.5.5 0 0 1 1 0v3h3a.5.5 0 0 1 .5.5z" />
+                                </svg>
+                                <p class="text-white text-lg mt-2">@ashnicole</p>
+                                <div class="flex items-center text-white mt-2 gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-suit-heart" viewBox="0 0 16 16">
+                                        <path
+                                            d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.6 7.6 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
+                                    </svg>
+                                    <span>8166 likes</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- image 7 -->
+
+                        <div class="relative group">
+                            <img src="./images/Cowbellpedia-Winners.jpg" alt="Image 1" class="w-full h-auto">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="white"
+                                    class="bi bi-plus-circle mb-2" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 1a7 7 0 1 1 0 14A7 7 0 0 1 8 1zm0 1a6 6 0 1 0 0 12A6 6 0 0 0 8 2zm3 5a.5.5 0 0 1 .5.5V8H8v3a.5.5 0 0 1-1 0V8H4a.5.5 0 0 1 0-1h3V4a.5.5 0 0 1 1 0v3h3a.5.5 0 0 1 .5.5z" />
+                                </svg>
+                                <p class="text-white text-lg mt-2">@willygiffy</p>
+                                <div class="flex items-center text-white mt-2 gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-suit-heart" viewBox="0 0 16 16">
+                                        <path
+                                            d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.6 7.6 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
+                                    </svg>
+                                    <span>1990 likes</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- image 8 -->
+                        <div class="relative group">
+                            <img src="./images/Cowbellpedia-Winners.jpg" alt="Image 1" class="w-full h-auto">
+                            <div
+                                class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white"
+                                    class="bi bi-plus-circle mb-2" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 1a7 7 0 1 1 0 14A7 7 0 0 1 8 1zm0 1a6 6 0 1 0 0 12A6 6 0 0 0 8 2zm3 5a.5.5 0 0 1 .5.5V8H8v3a.5.5 0 0 1-1 0V8H4a.5.5 0 0 1 0-1h3V4a.5.5 0 0 1 1 0v3h3a.5.5 0 0 1 .5.5z" />
+                                </svg>
+                                <p class="text-white text-lg">@julie</p>
+                                <div class="flex items-center text-white mt-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-suit-heart" viewBox="0 0 16 16">
+                                        <path
+                                            d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.6 7.6 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z" />
+                                    </svg>
+                                    <span>1990 likes</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Previous and next buttons -->
+                <button id="prevA"
+                    class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-2">
+                    &lt;
+                </button>
+                <button id="nextA"
+                    class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-2">
+                    &gt;
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- heading -->
+    <div class="container mx-auto mt-24 px-4">
+        <h1 class="text-5xl text-gray-700 font-bold  mb-10 mt-8">Girl's Science Quiz Tv Show</h1>
+    </div>
+
+
+    <!-- section overlay -->
+
+    <div class="w-full ">
+
+        <!-- Banner Image -->
+        <div class="relative bg-cover bg-center h-[550px] w-full"
+            style="background-image: url('./images/girls-6143072_1280.webp'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-black opacity-40"></div>
+
+            <!-- Text and Button -->
+            <div class="absolute inset-0 flex justify-center items-center">
+                <div class="text-center text-white">
+                    <p class="mb-4 font-bold text-4xl ">Presenting</p>
+                    <h1 class="text-[70px] font-bold mb-4">
+                        Girl's Science Quiz Competition
+                    </h1>
+                    <a href="#"
+                        class="inline-block px-6 py-4 bg-gradient-to-r from-blue-400 via-orange-600 to-blue-800 mt-8 text-white font-semibold border border-gray-300 rounded-md hover:scale-125 transition-transform">
+                        Learn more
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <section>
+        <div class="container mx-auto mt-32 px-4">
+            <div class="flex flex-col items-center justify-center">
+                <h1 class="font-bold text-[45px] mb-2 text-blue-800">Get N30,000 off early Registration*</h1>
+                <p class="font-bold">Three steps to save on early registering or more: </p>
+                <div class="flex gap-4 mt-4 font-semibold">
+                    <p>(1)Sign up recieve emails and communications below </p>
+                    <p>(2)Become a Member</p>
+                    <p>(3)Recieve an email with your N30,000 coupon</p>
+                </div>
+
+                <div class="flex gap-8 mt-4">
+                    <h4 class="font-medium  pb-2 border-b-2 inline-block w-[480px] border-black mt-4">Email address</h4>
+                    <a href="#"
+                        class="inline-block  border-2 border-black bg-gradient-to-r from-blue-400 via-orange-400 to-blue-500 text-white font-bold px-4 py-2">Sign
+                        Up</a>
+                </div>
+
+                <p class="mt-4 text-[11px] font-bold text-red-700">*The promo code will be sent via email and can take
+                    up to 30mins.
+                    Offer valid on registeration of N30,000 or more. Other <br>exclusions apply.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container mx-auto mt-16 mb-4">
+        <a href="#">Home /</a>
+    </div>
+
+   
+
+
+    <!-- footer -->
+
+    <footer class=" bg-gradient-to-r from-blue-400 via-orange-400 to-blue-500 text-white py-6">
+        <div class="container mx-auto px-4 font-semibold text-center">
+            <p>&copy; Lumen et Veritas International Academy 2024 . All rights reserved. Terms & Conditions</p>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

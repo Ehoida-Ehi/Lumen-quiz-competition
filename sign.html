@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        jennifer: "#121c84",
+                        submitGreen: '#4CAF50'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+          
+    </style>
+</head>
+
+<body class="bg-gradient-to-r from-blue-400 via-orange-400 to-blue-500 flex items-center justify-center h-screen">
+
+      <div class="w-full max-w-sm bg-white p-8 shadow-lg rounded-lg">
+        <form id="loginForm">
+          <h2 class="text-2xl font-bold text-center mb-4">Login</h2>
+          <div class="flex justify-center mb-6">
+            <img style="width: 80px;" src="./images/quiz-2004350_1280.png">
+          </div>
+         
+    
+          <!-- Email Field -->
+          <div class="mb-4">
+            <label for="email" class="block text-gray-700">Email</label>
+            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <p id="emailError" class="text-red-500 text-sm hidden">This field cannot be empty</p>
+          </div>
+    
+          <!-- Password Field -->
+          <div class="mb-4">
+            <label for="password" class="block text-gray-700">Password</label>
+            <input type="password" id="password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <p id="passwordError" class="text-red-500 text-sm hidden">This field cannot be empty</p>
+          </div>
+    
+          <!-- Remember Me -->
+          <div class="mb-4 flex items-center">
+            <input type="checkbox" id="rememberMe" class="mr-2">
+            <label for="rememberMe" class="text-gray-700">Remember me</label>
+          </div>
+    
+          <!-- Forgot Password -->
+          <div class="mb-6">
+            <a href="#" class="text-blue-500 text-sm hover:underline">Forgot password?</a>
+          </div>
+    
+          <!-- Login Button -->
+          <button type="submit" class="w-full bg-gradient-to-r from-blue-400 via-orange-400 to-blue-500 text-white py-2 hover:scale-105 transition duration-300 ease-in-out hover:text-black rounded-lg focus:outline-none">Log In</button>
+        </form>         
+      </div>                                                                                         
+   
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+    <script src="./sign.js"></script>
+</body>
+
+</html>
